@@ -1,41 +1,56 @@
-# 数据集准备指南
+# 数据集准备指南 (Dataset Setup Guide)
 
-为了训练安全帽检测模型，我们需要准备标注好的数据集。常用的数据集是 "Safety Helmet Wearing Dataset" (SHWD)。
+本项目使用的数据集源自 Roboflow Universe，并在其基础上进行了整理。
 
-## 1. 数据集下载
-推荐来源：
-- **Kaggle**: (搜索 "Safety Helmet Detection")
-- **GitHub**: https://github.com/njvisionpower/Safety-Helmet-Wearing-Dataset (需自行转换为 YOLO 格式)
-- **Roboflow**: https://universe.roboflow.com/ (搜索 "safety helmet" 并下载为 YOLOv8/v11 格式) 推荐！
+**数据集来源 (Source):**
+*   **平台**: Roboflow Universe
+*   **发布者**: Zayed Uddin Chowdhury
+*   **链接**: [https://universe.roboflow.com/zayed-uddin-chowdhury-ghymx/safety-helmet-wearing-dataset/dataset/3](https://universe.roboflow.com/zayed-uddin-chowdhury-ghymx/safety-helmet-wearing-dataset/dataset/3)
+*   **格式**: YOLOv8 / YOLOv11
 
-## 2. 目录结构配置
-请将下载的数据集解压到 `datasets/` 目录，并确保结构如下：
+---
 
-```
+## 2. 目录结构配置 (Directory Structure)
+
+为确保 `data.yaml` 能正确索引，请将下载的数据集解压到 `datasets/` 目录：
+
+```text
 datasets/
-├── data.yaml  (已创建，请根据实际情况修改路径)
-├── images/
-│   ├── train/
-│   │   ├── 00001.jpg
-│   │   └── ...
-│   └── val/
-│       ├── 00002.jpg
-│       └── ...
-└── labels/
+└── Safety-Helmet-Wearing-Dataset.v3-base-dataset.yolov11/
+    ├── README.dataset.txt
+    ├── README.roboflow.txt
+    ├── data.yaml  <-- 核心配置文件
     ├── train/
-    │   ├── 00001.txt
-    │   └── ...
-    └── val/
-        ├── 00002.txt
-        └── ...
+    │   ├── images/
+    │   └── labels/
+    ├── valid/
+    │   ├── images/
+    │   └── labels/
+    └── test/
+        ├── images/
+        └── labels/
 ```
 
-## 3. 标签说明
-`data.yaml` 中默认配置了两个类别：
-- 0: helmet (佩戴安全帽)
-- 1: head (未佩戴安全帽)
+## 3. 标签说明 (Classes)
+本数据集包含两个类别：
+*   **hat** (佩戴安全帽)
+*   **person** (未佩戴安全帽 / 头部)
 
-如果你的数据集此处定义不同，请修改 `datasets/data.yaml`。
+*(注：在 `data.yaml` 中，`hat` 对应 index 0，`person` 对应 index 1)*
 
-## 4. 快速测试 (使用生成的假数据)
-如果你暂时没有数据，可以运行 `src/create_dummy_data.py` 生成少量测试数据，以验证环境和代码是否跑通。
+## 4. 引用 (Citation)
+如果您在学术研究中使用了该数据集，建议引用：
+```bibtex
+@misc{ safety-helmet-wearing-dataset_dataset,
+    title = { Safety Helmet Wearing Dataset Dataset },
+    type = { Open Source Dataset },
+    author = { Zayed Uddin Chowdhury },
+    howpublished = { \url{ https://universe.roboflow.com/zayed-uddin-chowdhury-ghymx/safety-helmet-wearing-dataset } },
+    url = { https://universe.roboflow.com/zayed-uddin-chowdhury-ghymx/safety-helmet-wearing-dataset },
+    journal = { Roboflow Universe },
+    publisher = { Roboflow },
+    year = { 2024 },
+    month = { may },
+    note = { visited on 2024-01-04 },
+}
+```
