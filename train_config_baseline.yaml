@@ -1,0 +1,23 @@
+# Training Configuration (Baseline)
+# Use this for Ablation Study (No CBAM, No Inner-WIoU)
+
+# Enable/Disable Innovations
+use_innovations: false
+
+# Dataset
+data: datasets/data.yaml
+
+# Model
+# Standard YOLOv11s model config (built-in) or just use the pt file directly
+model_cfg: yolo11s.yaml 
+weights: yolo11s.pt
+
+# Hyperparameters
+epochs: 50
+batch: 8
+imgsz: 640
+device: 0
+
+# Project logging
+project: runs/train
+name: exp_baseline

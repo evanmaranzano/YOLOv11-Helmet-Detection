@@ -1,0 +1,16 @@
+# Core
+ultralytics>=8.3.0  # YOLO11 support
+torch>=1.13.0
+torchvision>=0.14.0
+
+# UI
+streamlit>=1.20.0
+
+# Tools
+opencv-python-headless>=4.6.0
+pillow>=9.0.0
+numpy>=1.23.0
+pandas>=1.5.0
+matplotlib>=3.6.0
+seaborn
+tqdm

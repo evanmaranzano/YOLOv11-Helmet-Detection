@@ -1,0 +1,22 @@
+# Training Configuration
+
+# Enable/Disable Innovations
+use_innovations: true
+
+# Dataset
+data: datasets/data.yaml
+
+# Model
+model_cfg: models/yolov11s-cbam.yaml
+# Update to point to the trained model
+weights: runs/train/exp_cbam_config/weights/best.pt
+
+# Hyperparameters
+epochs: 50
+batch: 8
+imgsz: 640
+device: 0
+
+# Project logging
+project: runs/train
+name: exp_cbam_config

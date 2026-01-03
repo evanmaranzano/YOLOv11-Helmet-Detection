@@ -1,0 +1,23 @@
+# Training Configuration (P2 High Resolution)
+# Optimized for Small Objects (4-Head Detection)
+
+# Enable Innovations (CBAM + Inner-WIoU + P2)
+use_innovations: true
+
+# Dataset
+data: datasets/data.yaml
+
+# Model
+model_cfg: models/yolov11s-cbam-p2.yaml
+weights: yolo11s.pt
+
+# Hyperparameters
+# Standard settings (removed high recall bias)
+epochs: 50
+batch: 4        # P2 layer consumes MUCH more memory (16x more pixels than P4). Lower batch size is safer.
+imgsz: 640
+device: 0
+
+# Project logging
+project: runs/train
+name: exp_cbam_p2

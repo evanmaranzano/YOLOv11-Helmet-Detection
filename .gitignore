@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project Specific
+# Ignore datasets (too large)
+datasets/
+
+# Ignore training runs/logs (too large and numerous)
+runs/
+!runs/.gitkeep
+
+# Ignore large model weights (optional, but recommended for github quota)
+*.pt
+weights/
+
+# Ignore local config overrides if any (keeping main configs though)
+# train_config_local.yaml
