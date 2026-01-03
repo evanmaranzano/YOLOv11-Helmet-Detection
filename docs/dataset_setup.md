@@ -6,7 +6,7 @@
 *   **平台**: Roboflow Universe
 *   **发布者**: Zayed Uddin Chowdhury
 *   **链接**: [https://universe.roboflow.com/zayed-uddin-chowdhury-ghymx/safety-helmet-wearing-dataset/dataset/3](https://universe.roboflow.com/zayed-uddin-chowdhury-ghymx/safety-helmet-wearing-dataset/dataset/3)
-*   **格式**: YOLOv8 / YOLOv11
+*   **格式**: YOLOv11
 
 ---
 
