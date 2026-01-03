@@ -1,6 +1,8 @@
 # 基于改进 YOLOv11 的工地安全帽佩戴检测系统
 (Safety Helmet Detection System Based on Improved YOLOv11)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## 1. 项目简介
 本项目基于最新的 **YOLOv11s** 模型进行改进，针对工地场景下小目标（远距离人员）、遮挡等难点问题，提出了多项创新优化。系统包含完整的训练训练 pipeline、消融实验配置以及可视化 Web 演示界面。
 
