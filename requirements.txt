@@ -4,7 +4,7 @@ torch>=1.13.0
 torchvision>=0.14.0
 
 # UI
-streamlit>=1.20.0
+
 
 # Tools
 opencv-python-headless>=4.6.0

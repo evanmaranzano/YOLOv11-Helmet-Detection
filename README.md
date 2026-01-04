@@ -76,12 +76,12 @@ python src/train.py --config train_config_p2.yaml
 
 ## 4. 演示与推理 (Inference & Demo)
 
-### 4.1 网页版可视化演示
-启动 Streamlit 界面，支持图片上传和实时调节置信度阈值。
+### 4.1 桌面版可视化演示 (Desktop Demo)
+启动本地 GUI 程序 (无需安装 Qt，基于原生 Tkinter)。
 ```bash
-streamlit run src/web_demo.py
+python src/desktop_demo.py
 ```
-*(默认加载 `train_config.yaml` 中配置的 best.pt 权重)*
+*(默认加载 `train_config.yaml` 中配置的 weights)*
 
 ### 4.2 批量图片推理
 对因为文件夹下的所有图片进行预测。
